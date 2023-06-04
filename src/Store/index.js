@@ -57,7 +57,7 @@ const getters = {
     return state.tasks.filter((item) => item.done).length;
   },
   // methods
-  getTasksByID(state, id) {
+  getTasksByID: (state) => (id) => {
     return state.tasks.filter((value) => value.id === id);
   },
 };

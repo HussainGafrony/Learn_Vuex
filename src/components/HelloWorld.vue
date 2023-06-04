@@ -6,11 +6,11 @@
     <h2>Jop : {{ jop }}</h2> -->
 
     <h1>Getters</h1>
-    <h2>Name : {{ gettername }}</h2>
-    <h2>{{ getIdTaksDone }}</h2>
+    <!-- <h2>Name : {{ gettername }}</h2> -->
+    <!-- <h2>{{ getIdTaksDone }}</h2> -->
     <!-- <h1>Tasks Time {{ tasksTime }}</h1> -->
     <!-- <h2>Get LengthTasks {{ getLengthTasks }}</h2> -->
-    <!-- <h2>getTasksByID : {{ getTasksByID(1) }}</h2> -->
+    <h2>getTasksByID : {{ getTasksByID(2) }}</h2>
   </div>
 </template>
 
@@ -34,9 +34,12 @@ export default {
     },
     getIdTaksDone() {
       return this.$store.getters.getIdTaksDone;
-    }, // getTasksByID() {
-    //   return this.$store.getters.getTasksByID;
-    // },
+    },
+
+    /// methodes
+    getTasksByID() {
+      return this.$store.getters.getTasksByID;
+    },
   },
 };
 </script>
