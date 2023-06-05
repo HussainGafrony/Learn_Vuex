@@ -6,6 +6,7 @@ const state = {
   name: "ahmad",
   lastname: "nory",
   jop: "software developer",
+  count: 0,
 
   tasks: [
     {
@@ -61,11 +62,35 @@ const getters = {
     return state.tasks.filter((value) => value.id === id);
   },
 };
+const mutations = {
+  increment(state) {
+    // type : increment
+    state.count++; // handler
+  },
+  decrement(state) {
+    state.count--;
+  },
+  n_increment(state, n) {
+    state.count += n;
+  },
+  n_decrement(state, n) {
+    state.count -= n;
+  },
+
+  // An other way
+  n_incrementway_2(state, payload) {
+    state.count += payload.plus;
+  },
+
+  n_decrementway_2(state, payload) {
+    state.count -= payload.minus;
+  },
+};
 
 const store = new Vuex.Store({
   state,
   getters,
-  mutations: {},
+  mutations,
   actions: {},
   modules: {},
 });

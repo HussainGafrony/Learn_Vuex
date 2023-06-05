@@ -1,26 +1,27 @@
 <template>
-  <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-  <HelloWorld msg="Welcome to Your Vue.js App" />
+  <v-app>
+    <main class="pt-9">
+      <router-link class="custom-link" to="/getters">Getters</router-link> | <router-link class="custom-link" to="/mutations">Mutations</router-link> |
+      <router-link class="custom-link" to="/getters">GettersPage</router-link>
+      <router-view class="pt-9 pl-9"></router-view>
+    </main>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-
 export default {
   name: "App",
-  components: {
-    HelloWorld,
-  },
+
+  data: () => ({
+    //
+  }),
 };
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style scoped>
+.custom-link {
+  color: blue;
+  font-weight: bold;
+  padding-left: 44px;
+  padding-top: 5px;
 }
 </style>
